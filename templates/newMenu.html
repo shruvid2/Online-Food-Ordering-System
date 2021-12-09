@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>New Menu</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    </head>
+    <body>
+        <h2>Please Add Items to The Menu</h2>
+        <div style = "width: 85%"></div>
+        <form method = 'POST' action = '/newMenuItem'>
+            <input type="hidden" name="rid" value="{{items[0]}}"/>
+            <div class="mb-3" style = "margin-left: 20px;">
+                <label for="Dname" class="form-label">Dish Name</label>
+                <input type="Dname" name = "dname" class="form-control" id="Dname" aria-describedby="Dname" required>
+            </div>
+            <div class="mb-3" style = "margin-left: 20px;">
+                <label for="mprice" class="form-label">Price of the Dish</label>
+                <input type="mprice" name = 'mprice' class="form-control" id="mprice" aria-describedby="mprice" required>
+            </div>
+            <div class="mb-3" style = "margin-left: 20px;">
+                <label for="description" class="form-label">Describe the dish in not more than 15 words</label>
+                <input type="description" name = 'des' class="form-control" id="description" aria-describedby="description" required>
+            </div>
+            <div id="dtype" class="form-label" style = "margin-left: 20px;">Type of the Dish</div>
+            <div class="form-check form-check-inline" style = "margin-left: 20px;">
+                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="Main Course">
+                <label class="form-check-label" for="inlineRadio1">Main Course</label>
+              </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="Appetizer">
+                <label class="form-check-label" for="inlineRadio2">Appetizer</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="Beverages">
+                <label class="form-check-label" for="inlineRadio1">Beverages</label>
+              </div>
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="Dessert">
+                <label class="form-check-label" for="inlineRadio2">Dessert</label>
+            </div><br/><br/> 
+            <button type="submit" class="btn btn-primary" style = "margin-left: 20px;">Add Dish to Menu</button>
+          </form><br/>
+          <form method = 'POST' action = '/createMenu'>
+          <button type = "submit" class = "btn btn-secondary" style = "margin-left: 20px;">Update/Create Menu</button>
+            </form>
+        </div>
+    </body>
+</html>

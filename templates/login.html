@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Project Title</title>
+        <link rel="stylesheet" type="text/css" href={{ url_for('static', filename = "Loginstyles.css") }}/>
+        <!--<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">-->
+    </head>
+    <body>
+        <h4 style="color:red">{{error}}</h4>
+        <h1>Online Food Ordering System</h1><br/>
+            <!-- Login and Signup -->
+            <div class="login-half">
+            <div class = "Sign in form" style = "padding-right: 25 px; padding-left: 25 px;">
+            <h2 class = "sign-in-h2">Login to your Account</h2>
+            <form role = "form" method = "post" action = '/homepage'>   <!-- Redirect to respective page acc to usertype -->
+                <fieldset>
+                    <div style = "margin-bottom: 10px">
+                    <label class = "sign-in-label">Select One of the Options</label>
+                    </div>
+                    <select class = "dropdown" name = 'typeofuser'>
+                        <option value = "Customer">Customer</option>
+                        <option value = "Delivery Person">Delivery Person</option>
+                        <option value = "Restaurant Owner">Restaurant Owner</option>
+                    </select>
+
+                    <input type="tel" pattern=".{10}" name = 'phone' class="loginemail" id="dphone" placeholder = 'Phone Number' oninput="check(this)" required>
+                    <input class = "loginpassword" placeholder = "Password" name = 'password' id = "loginpassword" type = "text" required>
+                    <input type = "submit" class = "login" value = "Login">
+                </fieldset>
+            </form></div>
+            </div>
+
+            <div class = "signup-half">
+            <div class = "Sign up form" style = "padding-right: 25 px; padding-left: 25 px;">
+            <h2 class = "sign-up-h2">Create A New Account</h2>
+            <form role = "form" method = "post" action = '/register'>
+                <fieldset>
+                    <div style = "margin-bottom:10px">
+                    <label class = "sign-up-label">Select One of the Options</label>
+                    </div>
+                    <select class = "dropdown" name = 'choice' required>
+                        <option value = "Customer">Customer</option>
+                        <option value = "Delivery Person">Delivery Person</option>
+                        <option value = "Restaurant Owner">Restaurant Owner</option>
+                    </select>
+                    <input type = "submit" class = "create" value = "Create">
+                </fieldset>
+            </form></div>
+        </div>
+            
+
+    </body>
+</html>

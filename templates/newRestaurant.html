@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>New Restaurant</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    </head>
+    <body>
+        <h2>Please Enter the Restaurant Details And Proceed to Creating the Menu</h2>
+        <form method = "post" action = "/registerRestaurant">
+            <div style = "width: 85%">
+            <div class="mb-3" style = "margin-left: 20px;">
+                <label for="Rname" class="form-label">Restaurant Name</label>
+                <input type="Rname" class="form-control" name = "Rname" id="Rname" aria-describedby="Rname" required>
+            </div>
+            <div class="mb-3" style = "margin-left: 20px;">
+                <label for="Rphone" class="form-label">Phone Number</label>
+                <input type="tel" pattern=".{10}" name = "Rphone" class="form-control" id="Rphone" oninput="check(this)" required>
+            </div>
+            <div class="mb-3" style = "margin-left: 20px;">
+                <label for="Raddr" class="form-label">Address</label>
+                <input type="Raddr" class="form-control" name = "Raddr" id="Raddr" aria-describedby="Raddr" required>
+            </div>
+            <div class="mb-3" style = "margin-left: 20px;">
+                <label for="rcuisine" class="form-label">Restaurant Cuisine</label>
+                <input type="text" class="form-control" id="rcuisine" name = "Rcuis" aria-describedby="rcuisine" required>
+            </div>
+            <div class="mb-3" style = "margin-left: 20px;">
+              <label for="exampleInputPassword1" class="form-label">Password</label>
+              <input type="password" name = "rpass" class="form-control" id="exampleInputPassword1">
+            </div>
+            <div id="mainr" class="form-label" style = "margin-left: 20px;">Is this the Main Restaurant? (Main Branch of a chain of Restaurants)</div>
+            <div id="mainr" class="form-text" style = "margin-left: 20px;">If your restaurant is not part of a chain, select "Yes".</div>
+            <div class="form-check form-check-inline" style = "margin-left: 20px;">
+                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="1" required>
+                <label class="form-check-label" for="inlineRadio1">Yes</label>
+              </div>
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="0">
+                <label class="form-check-label" for="inlineRadio2">No</label>
+            </div>
+            <div id="mainr" class="form-text" style = "margin-left: 20px;">If your restaurant is not the Main restaurant:</div>
+            <div class="mb-3" style = "margin-left: 20px;">
+                <label for="MRphone" class="form-label">Enter Phone Number of Main Restaurant</label>
+                <input type="tel" pattern=".{10}" name = "MRphone" class="form-control" id="MRphone" oninput="check(this)">
+            </div>
+            <br/>
+            <button type="submit" class="btn btn-primary" style = "margin-left: 20px;">Create Menu</button>
+        </div>
+          </form>
+    </body>
+</html>
