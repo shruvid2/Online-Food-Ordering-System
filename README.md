@@ -42,7 +42,7 @@ If the rating is above 3 and below or equal to 4, give “PROFICIENT”, If the 
 │   ├── newMenu.html
 │   ├── newRestaurant.html
 |   ├── orders.html
-│   └── review.html
+|   └── review.html
 ├── final_create.sql 
 ├── insert_final.sql
 ├── queries.sql
