@@ -16,3 +16,38 @@ If the rating is above 3 and below or equal to 4, give “PROFICIENT”, If the 
 - [ ] From all the orders, select the orders where the total price is more than average price spent by customers for any order. ***(can probably call them supercustomer and create a new coupon for them??)***
 - [X] Trigger for updating the cart's total_price ***(used this for cart total )***
 
+
+### Repository Structure 
+
+
+```bash
+.
+├── static
+│   └── Loginstyles.css
+├── templates
+│   ├── cart.html
+│   ├── confirm_order.html
+│   ├── cust_home.html
+│   ├── delivery_home.html
+│   ├── delivery_profile.html
+│   ├── edit.html
+│   ├── edit_profile.html
+│   ├── employee_order.html
+│   ├── employee_rest.html
+│   ├── error.html
+│   ├── login.html
+│   ├── menu.html
+│   ├── newCustomer.html
+│   ├── newDelivery.html
+│   ├── newMenu.html
+│   ├── newRestaurant.html
+|   ├── orders.html
+│   └── review.html
+├── final_create.sql 
+├── insert_final.sql
+├── queries.sql
+├── sample.py
+└── README.md
+
+```
+
